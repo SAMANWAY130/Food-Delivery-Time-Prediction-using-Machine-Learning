@@ -25,9 +25,10 @@ def calculate_haversine_distance(df):
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-model = joblib.load(r"C:\Users\saman\Downloads\delivery_time\model(1) .pkl")
-scaler = joblib.load(r"C:\Users\saman\Downloads\delivery_time\scaler(1) .pkl")
-columns = joblib.load(r"C:\Users\saman\Downloads\delivery_time\columns.pkl")
+# NEW
+model = joblib.load(os.path.join(BASE_DIR, "model(1) .pkl"))
+scaler = joblib.load(os.path.join(BASE_DIR, "scaler(1) .pkl"))
+columns = joblib.load(os.path.join(BASE_DIR, "columns.pkl"))
 Delivery_person_Age = st.number_input("Enter age")
 Delivery_person_Ratings = st.number_input("Enter rating")
 
